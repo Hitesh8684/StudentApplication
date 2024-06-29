@@ -9,8 +9,8 @@ class NavBar extends Component {
     search:'',
     onShow: false,
     color : 'dark',
-    backgroundColor : 'white',
-    mode : 'Dark'
+    backgroundColor : 'dark',
+    mode : 'dark'
   };
 
   componentDidMount() {
@@ -20,9 +20,9 @@ class NavBar extends Component {
 
   handleSearch = (event)=>{
     if(this.state.color === 'dark'){
-      this.setState({color:'white',backgroundColor:'dark',mode:'Light'});
+      this.setState({color:'white',backgroundColor:'dark',mode:'light'});
     }else{
-      this.setState({color:'dark',backgroundColor:'white',mode:'Dark'});
+      this.setState({color:'dark',backgroundColor:'white',mode:'dark'});
     }
    
   }
@@ -64,56 +64,14 @@ class NavBar extends Component {
                     New Student
                   </a>
                 </li>
-                <li class="nav-item">
+                {/* <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="/class">
                     Class
                   </a>
-                </li>
+                </li> */}
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="/search">
-                    Find STudents
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Action
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Another action
-                      </a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Something else here
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link disabled"
-                    href="#"
-                    tabindex="-1"
-                    aria-disabled="true"
-                  >
-                    Disabled
+                    Find Students
                   </a>
                 </li>
               </ul>

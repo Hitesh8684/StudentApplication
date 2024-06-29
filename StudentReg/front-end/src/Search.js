@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Input, InputGroup, Spinner } from "reactstrap";
+import loading_gif from "./img/loading_gif.gif";
 import NavBar from "./Navbar";
 
 class Search extends Component {
@@ -53,17 +54,11 @@ class Search extends Component {
         </div>
         {isLoading ? (
           <div>
-            <div align="center" className="my-3">
-              <Spinner
-                color="primary"
-                style={{
-                  height: "3rem",
-                  width: "3rem",
-                }}
-              >
-                Loading...
-              </Spinner>
+             <div className="back">
+            <div>
+              <img className="img" src={loading_gif}></img>
             </div>
+          </div>
           </div>
         ) : (
           <div>
